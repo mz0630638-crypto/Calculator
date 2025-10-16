@@ -6,9 +6,9 @@ int main() {
 
     printf("\n A Simple Calculator: ");
 
-    printf("\n1)Sum\n2)Subtraction\n4)Multiplication\n5)Division\n ");
+    printf("\n1)Sum\n2)Subtraction\n3)Multiplication\n4)Division\n5)Square\n");
 
-    printf("Enter Your Choice (1 - 4): ");
+    printf("Enter Your Choice (1 - 5): ");
     scanf("%d", &choice);
 
     printf("Enter a number: ");
@@ -37,9 +37,17 @@ int main() {
 
             }else ("The division with zero is not possible\n");
             break;
+        case 5:
+            result = a*a;
+            printf("The square of the number is: %d\n", result);
+            result = b*b;
+            printf("The square of the number is: %d\n", result);
+            break;
         default:
-            printf("Invalid choice(1 - 4)\n");
+            printf("Invalid choice(1 - 5)\n");
+    
     }
 
     return 0;
+
 }
