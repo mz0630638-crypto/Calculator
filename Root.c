@@ -7,7 +7,7 @@ int main() {
     printf("\n A Simple Calculator: ");
 
     printf("\n1)Sum\n2)Subtraction\n3)Multiplication\n4)Division\n5)Square\n");
-    printf("\n6)Percentage/Module")
+    printf("\n6)Percentage/Module");
 
     printf("Enter Your Choice (1 - 6): ");
     scanf("%d", &choice);
@@ -44,17 +44,10 @@ int main() {
             result = b*b;
             printf("The square of the number is: %d\n", result);
             break;
-        case 6:
-            result = a % 100*1000;
-            printf("The percentage of the Numbers is: %d\n", result);
-            result = b % 100*1000;
-            printf("The percentage of the Number is: %d\n", result);
-            break;
         default:
             printf("Invalid choice(1 - 6)\n");
     
     }
-
     return 0;
 
 }
