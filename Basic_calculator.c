@@ -2,20 +2,34 @@
 
 int main() {
 
-    int a, b, choice,  result;
+    int a, b, choice, result;
 
     printf("\n A Simple Calculator: ");
 
     printf("\n1)Sum\n2)Subtraction\n3)Multiplication\n4)Division\n5)Square\n");
 
-    printf("Enter Your Choice (1 - 5): ");
+    choice = 0;
+    while (choice < 1 || choice > 5) {
+    printf("Enter Your Choice(1 - 5): ");
     scanf("%d", &choice);
+    if(choice < 1 || choice > 5) {
+        printf("Invalid choice.Try again.\n");
 
-    printf("Enter a number: ");
-    scanf("%d", &a);
+    }
+    }
 
-    printf("Enter another number:");
-    scanf("%d", &b);
+    if(choice == 5) {
+        printf("Enter a Number: ");
+        scanf("%d", &a);
+    result = a*a;
+        printf("The square of the number is: %d\n",result);
+    }else {
+        printf("Enter a first number: ");
+        scanf("%d", &a);
+
+        printf("Enter a second number: ");
+        scanf("%d", &b);
+    }
 
     switch (choice) {
         case 1:
@@ -31,23 +45,12 @@ int main() {
             printf("The Multiplication of the Two nubmers is: %d\n", result);
             break;
         case 4:
-            result = a / b;
-            if(b == 0) {
-                printf("The division of the Two NUbmers is: %d\n", result);
-
-            }else ("The division with zero is not possible\n");
+            if(b != 0) {
+                
+                printf("The division of the Two Nbmers is: %d\n", a / b);
             break;
-        case 5:
-            result = a*a;
-            printf("The square of the number is: %d\n", result);
-            result = b*b;
-            printf("The square of the number is: %d\n", result);
-            break;
-        default:
-            printf("Invalid choice(1 - 5)\n");
-    
-    }
+            }
 
     return 0;
-
+    }
 }
