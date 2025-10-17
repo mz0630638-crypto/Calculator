@@ -48,7 +48,10 @@ int main() {
             if(b != 0) {
                 
                 printf("The division of the Two Nbmers is: %d\n", a / b);
+
             break;
+            }else {
+                printf("The division with zero is not possible\n");
             }
 
     return 0;
